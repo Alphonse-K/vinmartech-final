@@ -8,10 +8,10 @@ services:
       - '3307:3306'
 
     environment:
-      - MYSQL_ROOT_PASSWORD=K56a33--m1
-      - MYSQL_USER=user
-      - MYSQL_PASSWORD=mysql
-      - MYSQL_DATABASE=db.vinmartech
+      - MYSQL_ROOT_PASSWORD: K56a33--m1
+      - MYSQL_USER: user
+      - MYSQL_PASSWORD: mysql
+      - MYSQL_DATABASE: db.vinmartech
 
     volumes:
       - ./data/db:/var/lib/mysql/data/
@@ -36,8 +36,8 @@ services:
       dockerfile: Dockerfile
 
     environment:
-      - MYSQL_ROOT_PASSWORD=K56a33--m1
-      - MYSQL_DATABASE=db.vinmartech
+      - MYSQL_ROOT_PASSWORD: K56a33--m1
+      - MYSQL_DATABASE: db.vinmartech
 
     ports:
       - '8000:8000'
