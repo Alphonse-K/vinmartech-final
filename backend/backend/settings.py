@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db.vinmartech',
+        'NAME': 'vinmartech',
         'USER': 'root',  
         'PASSWORD': 'K56a33--m1',  
         'HOST': '127.0.0.1',  
