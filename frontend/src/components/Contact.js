@@ -5,10 +5,13 @@ import BackToTop from './BackToTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelopeCircleCheck, faLocationDot, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { Helmet } from 'react-helmet-async';
+import axios from "axios";
+
+
 
 
 const initialValues = {
-    name: "",
+    author: "",
     email: "",
     message: "",
 };
@@ -22,9 +25,11 @@ export default function Contact() {
     SetInputs({...inputs, [name]: value});
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit =  (e) => {
     e.preventDefault();
-    console.table(inputs);
+    axios.post("http://localhost:8000/contact/", inputs)
+      .then(res => console.log(res.data))
+      .catch((e) => console.log(e)) 
     reset();
   }
 
@@ -47,8 +52,9 @@ export default function Contact() {
           <div className='contact-form col-xs-12 col-sm-12 col-md-6 col-lg-6'>
             <h6>Disponible 24/7 :</h6>
             <h1>À votre écoute:</h1>
-            <form onSubmit={handleSubmit}>
-              <input type='text' name='name' value={inputs.name} placeholder='Nom/Prénom' onChange={handleChange}/><br />
+            <form onSubmit={handleSubmit} action='/endpoint' method='post'>
+              {/* <CSRFToken /> */}
+              <input type='text' name='author' value={inputs.author} placeholder='Nom/Prénom' onChange={handleChange}/><br />
               <input type='email' name='email' value={inputs.email} placeholder='Email' onChange={handleChange}/><br />
               <textarea type='textarea' name='message' value={inputs.message} placeholder='Votre message' onChange={handleChange}/><br />
               <input type='submit' value='ENVOYEZ VOTRE MESSAGE' />

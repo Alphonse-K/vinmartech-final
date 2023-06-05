@@ -15,6 +15,9 @@ import Testimonials from './Testimonials';
 import { HashLink } from 'react-router-hash-link';
 import { Helmet } from 'react-helmet-async';
 
+
+
+
 export default function Home() {
 
   const [index, setIndex] = useState(0);
