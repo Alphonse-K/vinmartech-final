@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 
+
+
 export default function Newsletter() {
 
     const [email, setEmail] = useState('');
@@ -37,7 +39,6 @@ export default function Newsletter() {
             <h1>Préparez vous à réussir votre aventure digital! </h1>
             <h6>Recevez votre newsletter directement dans votre boîte mail</h6>
             <form onSubmit={onSubmit} action='/endpoint' method='post'>
-              {/* <CSRFToken /> */}
               <label htmlFor="news" className='d-inline-block'>votre adresse email:</label>             
               <div className='d-flex'>
                 <input 

@@ -6,7 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelopeCircleCheck, faLocationDot, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { Helmet } from 'react-helmet-async';
 import axios from "axios";
-
+axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+axios.defaults.xsrfCookieName = "csrftoken";
+axios.defaults.withCredentials = true
 
 
 

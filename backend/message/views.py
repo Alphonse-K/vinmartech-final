@@ -3,6 +3,12 @@ from .models import Message, NewsLetter
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from django.views.decorators.csrf import csrf_protect, ensure_csrf_cookie
+from django.utils.decorators import method_decorator
+# from rest_framework.permissions import IsAuthenticated, AllowAny
+
+
+
 
 
 # Create your views here.
@@ -13,6 +19,7 @@ class SendMessage(APIView):
         serializer = MessageForm(queryset, many=True)
         return Response(serializer.data)
 
+    @method_decorator(csrf_protect)
     def post(elf, request, *args, **kwargs):
         serializer = MessageForm(data=request.data)
         if serializer.is_valid():
@@ -22,12 +29,13 @@ class SendMessage(APIView):
     
 
 class SendEmail(APIView):
-    
+        
     def get(self, request, *args, **kwargs):
         queryset = NewsLetter.objects.all()
         serializer = NewsLetterForm(queryset, many=True)
         return Response(serializer.data)
 
+    @method_decorator(csrf_protect) 
     def post(elf, request, *args, **kwargs):
         serializer = NewsLetterForm(data=request.data)
         if serializer.is_valid():
