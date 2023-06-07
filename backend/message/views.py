@@ -3,9 +3,8 @@ from .models import Message, NewsLetter
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from django.views.decorators.csrf import csrf_protect, ensure_csrf_cookie
+from django.views.decorators.csrf import csrf_protect
 from django.utils.decorators import method_decorator
-# from rest_framework.permissions import IsAuthenticated, AllowAny
 
 
 
