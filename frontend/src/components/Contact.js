@@ -55,7 +55,6 @@ export default function Contact() {
             <h6>Disponible 24/7 :</h6>
             <h1>À votre écoute:</h1>
             <form onSubmit={handleSubmit} action='/endpoint' method='post'>
-              {/* <CSRFToken /> */}
               <input type='text' name='author' value={inputs.author} placeholder='Nom/Prénom' onChange={handleChange}/><br />
               <input type='email' name='email' value={inputs.email} placeholder='Email' onChange={handleChange}/><br />
               <textarea type='textarea' name='message' value={inputs.message} placeholder='Votre message' onChange={handleChange}/><br />
