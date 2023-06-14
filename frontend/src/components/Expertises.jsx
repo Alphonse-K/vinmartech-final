@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
+// import Navbar from './Navbar';
+// import Footer from './Footer';
 import BackToTop from './BackToTop';
 import { Bounce, Slide } from 'react-awesome-reveal';
 import { HashLink } from 'react-router-hash-link';
@@ -13,7 +13,7 @@ export default function Expertises() {
       <Helmet>
         <title>Vinmartech | Parcourez nos différentes Prestations.</title>
       </Helmet>
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className='expertise-header'>
           <img src={require('../img/desktop.jpg')} alt='' />
           <section className='expertise-text'>
@@ -110,7 +110,7 @@ export default function Expertises() {
         {/* <div>Expertises</div>
         <div>Expertises</div> */}
         <BackToTop />
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   )
 }
