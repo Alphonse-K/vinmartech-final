@@ -1,13 +1,12 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react' ;
-import '@testing-library/jest-dom';
-// import Footer from './Footer';
+import Expertises from './Expertises';
 
 
 function sum(a, b) {
    return a + b;
 }
- test("Testing the footer component: ", () => {
-   //  render(<Footer />);
+ test("Testing the expertises component: ", () => {
+    render(<Expertises />);
     expect(sum(5, 8)).toEqual(13);
  })
