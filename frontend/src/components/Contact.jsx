@@ -1,7 +1,4 @@
-import React, {useState} from 'react';
-// import Navbar from './Navbar';
-// import Footer from './Footer';
-import BackToTop from './BackToTop';
+import React, {useState} from 'react';import BackToTop from './BackToTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelopeCircleCheck, faLocationDot, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { Helmet } from 'react-helmet-async';
@@ -44,7 +41,6 @@ export default function Contact() {
       <Helmet>
         <title>Vinmartech | Contact</title>
       </Helmet>
-      {/* <Navbar /> */}
       <div className='contact-section'>
         <div className='contact-header'>
           <h1>Entrez en Contact avec Notre Équipe:</h1>
@@ -111,7 +107,6 @@ export default function Contact() {
         </div>    
       </div>
       <BackToTop />
-      {/* <Footer /> */}
     </div>
   )
 }
