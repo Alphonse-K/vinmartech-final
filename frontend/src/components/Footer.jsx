@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { faFacebookSquare, faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {HashLink}  from 'react-router-hash-link';
+import { HashLink }  from 'react-router-hash-link';
 
 export default function Footer() {
 
@@ -10,7 +10,7 @@ export default function Footer() {
     <>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgb(217, 4, 41)" fillOpacity="1" d="M0,32L48,64C96,96,192,160,288,208C384,256,480,288,576,272C672,256,768,192,864,176C960,160,1056,192,1152,208C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
       <div className='footerParent d-flex'>
-          <div className='col-xs-12 col-sm-12 col-md-3 col-lg-3 '>      
+          <div className='col-xs-12 col-sm-12 col-md-3 col-lg-4 '>      
               <HashLink to="/#home" className='logoLink'><h1 className="logo">Vinmartech-Sarlu</h1></HashLink>
               <div className='footerText'>
                 <p><small>VINMARTECH-SARLU</small> est une agence web spécialisée dans la création de site internet, d'application mobile, ERP / CRM, et
@@ -35,7 +35,7 @@ export default function Footer() {
                 <HashLink className='logoLinkFooter' to='/expertises#ecommerce'><h6>Site E-Commerce</h6></HashLink>
                 <HashLink className='logoLinkFooter' to='/expertises#vitrine'><h6>Site Vitrine</h6></HashLink>
             </div>
-            <div className='footer-service col-xs-12 col-sm-12 col-md-3 col-lg-3'>
+            <div className='footer-service col-xs-12 col-sm-12 col-md-3 col-lg-2'>
                 <h3>Liens Utiles</h3>
                 <HashLink className='logoLinkFooter' to='/#home'><h6>Accueil</h6></HashLink>
                 <HashLink className='logoLinkFooter' to='/#about'><h6>À propos</h6></HashLink>

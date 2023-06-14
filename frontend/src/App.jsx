@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from 'react';
 import './App.css';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -32,7 +32,7 @@ function App() {
         loading 
         ? <Spinner />
         :
-        <>
+        <BrowserRouter>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -41,7 +41,7 @@ function App() {
             <Route path="*" element={<NoPage />} />
           </Routes>
           <Footer />
-        </>
+        </BrowserRouter>
       }
     </HelmetProvider>
   );
