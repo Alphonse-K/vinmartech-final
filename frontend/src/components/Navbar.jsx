@@ -9,6 +9,7 @@ import { HashLink } from 'react-router-hash-link';
 export default function Navbar() {
     useEffect(() => {
         handleClick1();
+        handleClick2();
     }, [])
 
     const handleClick1 = () => {
@@ -27,18 +28,14 @@ export default function Navbar() {
 
     const handleClick2 = () => {
         var clickable1 = document.getElementById('navpage');
-        if( clickable1.style.display === 'block' ) {
-            clickable1.style.display='none';
-        } else {
-            clickable1.style.display='block';
-            // clickable1.style.position='fixed';
-            // clickable1.style.width='100%';
-        }
+        var clickable2 = document.getElementById('fabars');
+        clickable1.style.display='none';
+        clickable2.style.display='flex';
     }
 
   return (
     // <div></div>
-    <div>
+    <>
         <div className="logoFont" id='fabars' >
             <Link to="/" className='logoLink' id='home'><h1 className="logo">Vinmartech-Sarlu</h1></Link>
             <div className="font" onClick={handleClick1}><FontAwesomeIcon icon={faBars}/></div>
@@ -48,7 +45,7 @@ export default function Navbar() {
                 <Link to="/" className='logoLink'><h1 className="logo">Vinmartech-Sarlu</h1></Link>
                 <div className="font" onClick={handleClick1}><FontAwesomeIcon icon={faXmark} /></div>
             </div>
-            <div className="nav-elem">
+            <div className="nav-elem" id='nav-elem'>
                 <nav>
                     <ul>
                     <Slide cascade>
@@ -69,6 +66,6 @@ export default function Navbar() {
                 </nav>
             </div>
         </div>
-    </div>
+    </>
   )
 }
