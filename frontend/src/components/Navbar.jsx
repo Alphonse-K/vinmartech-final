@@ -6,10 +6,6 @@ import { Slide } from 'react-awesome-reveal';
 import { HashLink } from 'react-router-hash-link';
 
 
-
-
-
-
 export default function Navbar() {
     useEffect(() => {
         handleClick1();
@@ -26,6 +22,17 @@ export default function Navbar() {
             clickable1.style.position='fixed';
             clickable1.style.width='100%';
             clickable2.style.display='none';
+        }
+    }
+
+    const handleClick2 = () => {
+        var clickable1 = document.getElementById('navpage');
+        if( clickable1.style.display === 'block' ) {
+            clickable1.style.display='none';
+        } else {
+            clickable1.style.display='block';
+            // clickable1.style.position='fixed';
+            // clickable1.style.width='100%';
         }
     }
 
@@ -46,16 +53,16 @@ export default function Navbar() {
                     <ul>
                     <Slide cascade>
                         <li>
-                        <HashLink to="/" className='link'>Accueil</HashLink>
+                        <Link to="/" className='link' onClick={handleClick2} >Accueil</Link>
                         </li>
                         <li>
-                        <HashLink to="/#about" className='link'>À propos</HashLink>
+                        <HashLink to="/#about" className='link' onClick={handleClick2} >À propos</HashLink>
                         </li>
                         <li>
-                        <HashLink to="/expertises#expertises" className='link'>Expertises</HashLink>
+                        <HashLink to="/expertises#expertises" className='link' onClick={handleClick2} >Expertises</HashLink>
                         </li>
                         <li>
-                        <HashLink to="/contact#contact" className='link'>Contact</HashLink>
+                        <HashLink to="/contact#contact" className='link' onClick={handleClick2} >Contact</HashLink>
                         </li>
                     </Slide>
                     </ul>

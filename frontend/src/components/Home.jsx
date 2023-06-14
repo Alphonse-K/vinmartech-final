@@ -6,9 +6,9 @@ import image1 from '../img/Allura - Love is in the Air.png';
 import image2 from '../img/Meeting.png';
 import image3 from '../img/apps2.jpg';
 
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import BackToTop from './BackToTop';
-import Footer from './Footer';
+// import Footer from './Footer';
 import ServicesItem from './ServicesItem';
 import Newsletter from './Newsletter';
 import Testimonials from './Testimonials';
@@ -88,7 +88,7 @@ export default function Home() {
       <Helmet>
         <title>Vinmartech | Bienvue chez nous!</title>
       </Helmet>
-      <Navbar />
+      {/* <Navbar /> */}
       <Carousel activeIndex={index} onSelect={handleSelect}>
         {data1.map((slide, i) => {
           return (
@@ -176,7 +176,7 @@ export default function Home() {
     <Testimonials />
     <Newsletter />
     <BackToTop />
-    <Footer />
+    {/* <Footer /> */}
     </div>
   )
 }

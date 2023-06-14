@@ -10,7 +10,7 @@ export default function NoPage() {
       <Helmet>
         <title>Vinmartech | Cette page n'existe pas!</title>
       </Helmet>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className='errorContainer' style={{
         display: 'flex',  
         justifyContent: 'center', 
