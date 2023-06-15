@@ -1,4 +1,5 @@
-import React from 'react';import BackToTop from './BackToTop';
+import React from 'react';
+import BackToTop from './BackToTop';
 import { Bounce, Slide } from 'react-awesome-reveal';
 import { HashLink } from 'react-router-hash-link';
 import { Helmet } from 'react-helmet-async';
@@ -10,6 +11,7 @@ export default function Expertises() {
       <Helmet>
         <title>Vinmartech | Parcourez nos différentes Prestations.</title>
       </Helmet>
+
         <div className='expertise-header'>
           <img src={require('../img/desktop.jpg')} alt='' />
           <section className='expertise-text'>
@@ -103,7 +105,9 @@ export default function Expertises() {
           </div>
         </Slide>
         </section>
+
         <BackToTop />
+
     </div>
   )
 }
