@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react' ;
 import '@testing-library/jest-dom';
-import BackToTop from './BackToTop';
+import Testimonials from './Testimonials';
 
- test("Testing the back to top button", () => {
+ test("Testing the testimonials", () => {
     render(
-        <BackToTop />
+        <Testimonials />
     )
  })
