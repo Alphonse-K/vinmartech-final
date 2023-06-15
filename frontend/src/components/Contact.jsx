@@ -26,10 +26,14 @@ export default function Contact() {
 
   const handleSubmit =  (e) => {
     e.preventDefault();
-    axios.post("http://localhost:8000/contact/", inputs)
-      .then(res => console.log(res.data))
-      .catch((e) => console.log(e)) 
-    reset();
+    try {
+      axios.post("http://localhost:8000/contact/", inputs)
+        .then(res => console.log(res.data))
+        .catch((e) => console.log(e)) 
+      reset();
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const reset = () => {
