@@ -21,10 +21,14 @@ export default function Newsletter() {
     const onSubmit = async (event) => {
       event.preventDefault();
       const result = {"email": email, "consent": consent}
-      await axios.post("http://localhost:8000/letter/", result)
+      try {
+        await axios.post("http://localhost:8000/letter/", result)
         .then(res => console.log(res.data) )
         .catch((e) => console.log(e));
       reset();
+      } catch (error) {
+        console.error(error);
+      }
     }
   
     const reset = () => {
