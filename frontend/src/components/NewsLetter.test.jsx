@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react' ;
 import '@testing-library/jest-dom';
-import Footer from './Footer';
 import ErrorBoundary from '../ErrorBoundry';
+import Newsletter from './Newsletter';
 
 
  test("Testing the footer component: ", () => {
     render(
       <ErrorBoundary>
-      <Footer />
+        <Newsletter />
       </ErrorBoundary>
     );
  })

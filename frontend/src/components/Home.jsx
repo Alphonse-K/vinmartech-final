@@ -76,7 +76,7 @@ export default function Home() {
       description:"Le commerce en ligne est devenu un atout puissant pour une entreprise, cela permet un développement plus important de la notoriété et l’attraction de nouveaux clients; Alors on y va.", 
      },
   ]
-  const handleSelect = (selectIndex, e) => {
+  const handleSelect = (selectIndex) => {
       setIndex(selectIndex);
   }
 
