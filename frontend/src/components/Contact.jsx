@@ -58,7 +58,7 @@ export default function Contact() {
               <input type='text' name='author' value={inputs.author} placeholder='Nom/Prénom' onChange={handleChange}/><br />
               <input type='email' name='email' value={inputs.email} placeholder='Email' onChange={handleChange}/><br />
               <textarea type='textarea' name='message' value={inputs.message} placeholder='Votre message' onChange={handleChange}/><br />
-              <input role='textbox' type='submit' value='ENVOYEZ VOTRE MESSAGE' name='inputs' />
+              <input type='submit' value='ENVOYEZ VOTRE MESSAGE' name='inputs' />
             </form>
           </div>
           <div className='contact-address col-xs-12 col-sm-12 col-md-6 col-lg-6'>
