@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import BackToTop from './BackToTop';
 
  test("Testing the back to top button", () => {
-    render(
-        <BackToTop />
-    )
+    render(<BackToTop />);
+
+    expect(screen.getByRole('heading')).toBeInTheDocument();
  })

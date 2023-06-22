@@ -9,11 +9,11 @@ const BackToTop = () => {
   
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-            if (scrolled > 300){
-            setVisible(true)
+            if (scrolled > 300) {
+                setVisible(true)
             } 
-            else if (scrolled <= 300){
-            setVisible(false)
+            else if (scrolled <= 300) {
+                setVisible(false)
             }
         };
         
@@ -27,12 +27,14 @@ const BackToTop = () => {
         window.addEventListener('scroll', toggleVisible);
 
     return (
-        <FontAwesomeIcon 
-            onClick={scrollToTop} 
-            style={{display: visible ? 'inline' : 'none'}}
-            className='backtotop' 
-            icon={faArrowUp}
-        />
+        <>
+            <FontAwesomeIcon 
+                onClick={scrollToTop} 
+                style={{display: visible ? 'inline' : 'none'}}
+                className='backtotop' 
+                icon={faArrowUp}
+            />
+        </>
     )
 }
 
