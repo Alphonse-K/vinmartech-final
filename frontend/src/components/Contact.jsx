@@ -1,4 +1,4 @@
-import React, {useState} from 'react';import BackToTop from './BackToTop';
+import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelopeCircleCheck, faLocationDot, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { Helmet } from 'react-helmet-async';
@@ -110,7 +110,6 @@ export default function Contact() {
           </div>
         </div>    
       </div>
-      <BackToTop />
     </div>
   )
 }
