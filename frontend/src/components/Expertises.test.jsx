@@ -13,7 +13,6 @@ describe('Expertise Component:', () => {
    test("Testing the expertises component: ", () => {
       render(<BrowserRouter><HelmetProvider><Expertises /></HelmetProvider></BrowserRouter>);
       const htmlEl = screen.getAllByRole('button', {name: 'Vous avez un projet?'});
-      console.log(htmlEl[0]);
       expect(htmlEl[0]).toBeInTheDocument();
    })
 })

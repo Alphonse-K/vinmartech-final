@@ -27,7 +27,6 @@ const BackToTop = () => {
         window.addEventListener('scroll', toggleVisible);
 
     return (
-        
         <FontAwesomeIcon 
             onClick={scrollToTop} 
             style={{display: visible ? 'inline' : 'none'}}
@@ -37,4 +36,4 @@ const BackToTop = () => {
     )
 }
 
-export default BackToTop
+export default BackToTop;

@@ -8,4 +8,6 @@ import { BrowserRouter } from 'react-router-dom';
  test("Testing the footer component: ", () => {
     render(<BrowserRouter><Footer /></BrowserRouter>
     );
+
+    expect(screen.getByRole('heading', {name: 'Service'})).toBeInTheDocument();
  })
