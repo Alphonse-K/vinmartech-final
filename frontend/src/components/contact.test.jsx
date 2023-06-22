@@ -5,6 +5,7 @@ import '@testing-library/jest-dom';
 import Contact from './Contact';
 import ErrorBoundary from '../ErrorBoundry';
 import axios from 'axios';
+import { HelmetProvider } from 'react-helmet-async';
 
 // jest.mock('axios');
 afterEach(cleanup);
@@ -12,8 +13,8 @@ afterEach(cleanup);
 describe('Contact.jsx: ', () => {
 
    test('Test button', async () => {
-      render(<ErrorBoundary><Contact /></ErrorBoundary>)
-      expect(await screen.findByRole('textbox')).toBeInTheDocument();
+      render(<HelmetProvider><Contact /></HelmetProvider>)
+      expect( screen.getByRole('button')).toBeInTheDocument();
    })
    
 })

@@ -1,14 +1,21 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react' ;
+import { render, screen, cleanup } from '@testing-library/react' ;
 import '@testing-library/jest-dom';
 import Expertises from './Expertises';
-import ErrorBoundary from '../ErrorBoundry';
+import '../../__mocks__/intersectionObserverMock';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter } from 'react-router-dom';
 
+afterEach(cleanup);
 
- test("Testing the expertises component: ", () => {
-    render(   
-    <ErrorBoundary>
-      <Expertises />
-     </ErrorBoundary>
-  );
- })
+describe('Expertise Component:', () => {
+
+   test("Testing the expertises component: ", () => {
+      render(<BrowserRouter><HelmetProvider><Expertises /></HelmetProvider></BrowserRouter>);
+      const htmlEl = screen.getAllByRole('button', {name: 'Vous avez un projet?'});
+      console.log(htmlEl[0]);
+      expect(htmlEl[0]).toBeInTheDocument();
+   })
+})
+
+//<BrowserRouter><ErrorBoundary><HelmetProvider><Expertises /></HelmetProvider></ErrorBoundary></BrowserRouter>
