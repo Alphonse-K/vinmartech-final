@@ -8,6 +8,6 @@ module.exports = {
         "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
       },
     transformIgnorePatterns: [
-    "node_modules/(?!swiper|ssr-window)"
+    "node_modules/(?!swiper|ssr-window|axios)"
     ]
 }

@@ -3,7 +3,6 @@ import { render, screen, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import Contact from './Contact';
-import ErrorBoundary from '../ErrorBoundry';
 import axios from 'axios';
 import { HelmetProvider } from 'react-helmet-async';
 
