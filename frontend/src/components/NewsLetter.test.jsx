@@ -3,15 +3,28 @@ import { render, screen } from '@testing-library/react' ;
 import  userEvent  from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import Newsletter from './Newsletter';
+import axios from 'axios';
+import mockFetch, { postUsers } from '../../__mocks__/mockAxios';
 
-const callBack = jest.fn(x => x);
+jest.mock('axios');
 
- test("Testing the Newsletter component: ", async () => {
+// beforeEach(() => {
+//    jest.spyOn(window, 'axios').mockImplementation(mockFetch);
+//  });
 
+// afterEach(() => {
+//    jest.restoreAllMocks();
+// })
+
+
+test("Testing the Newsletter component: ", async () => {
    render(<Newsletter />);
 
-   userEvent.click('button').then(expect(callBack(2)).toBe(2));
-   expect(screen.getByRole('button')).not.toBeDisabled();
-   expect(screen.getByRole('heading', {name: 'Préparez vous à réussir votre aventure digital!'}));
+   const btn = await screen.findByRole('button');
+   expect(btn).not.toBeDisabled();
+   userEvent.click(btn);
+   const res = mockFetch('http://localhost:8000/letter/');
+   axios.post.mockImplementation(() => Promise.resolve({ data: {email: 'dka@fld.co', consent: true} }));
 
- })
+   expect(res.json()[0]).toEqual({email: 'kana@gmail.com', consent: false})
+})
