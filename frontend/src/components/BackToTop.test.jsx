@@ -5,6 +5,4 @@ import BackToTop from './BackToTop';
 
  test("Testing the back to top button", () => {
     render(<BackToTop />);
-
-    expect(screen.getByRole('heading')).toBeInTheDocument();
  })

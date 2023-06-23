@@ -54,7 +54,7 @@ export default function Newsletter() {
                   placeholder='Votre adresse email' 
                   onChange={handleInput}
                 />
-                <button><FontAwesomeIcon icon={faPaperPlane} style={{color: "#ffff",}} /></button>
+                <button type='button'><FontAwesomeIcon icon={faPaperPlane} style={{color: "#ffff",}} /></button>
               </div>
               <div className='checkbox d-flex' >
                   <input type="checkbox" name="cheese" id="check" checked={consent} onChange={checkHandler}></input>
