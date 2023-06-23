@@ -4,17 +4,9 @@ import  userEvent  from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import Newsletter from './Newsletter';
 import axios from 'axios';
-import mockFetch, { postUsers } from '../../__mocks__/mockAxios';
+import mockFetch from '../../__mocks__/mockAxios';
 
 jest.mock('axios');
-
-// beforeEach(() => {
-//    jest.spyOn(window, 'axios').mockImplementation(mockFetch);
-//  });
-
-// afterEach(() => {
-//    jest.restoreAllMocks();
-// })
 
 
 test("Testing the Newsletter component: ", async () => {
