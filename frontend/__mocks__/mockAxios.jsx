@@ -1,9 +1,16 @@
-const messages = {
-};
-
-const emails = {
-};
-
+const messages = [
+{   
+    author: 'alphonse',
+    email: 'kan@mail.com',
+    message: 'true'
+}
+]
+const emails = [
+    {
+        email: 'kana@gmail.com',
+        consent: false
+    }
+]
 
 export default function mockFetch(url) {
     switch (url) {
@@ -11,14 +18,14 @@ export default function mockFetch(url) {
             return {
                 ok: true,
                 status: 201,
-                json: async () => messages,
+                json:  () => emails,
             };
         }
         case "http://localhost:8000/contact/": {
             return {
                 ok: true,
                 status: 201,
-                json: async () => emails,
+                json:  () => messages,
             };
         }
         default: {
