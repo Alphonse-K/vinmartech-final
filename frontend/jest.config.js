@@ -9,5 +9,5 @@ module.exports = {
       },
     transformIgnorePatterns: [
     "node_modules/(?!swiper|ssr-window|axios)"
-    ]
+    ],
 }
