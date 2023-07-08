@@ -29,6 +29,7 @@ services:
 
   backend:
     image: vinmartech-backend:latest 
+    restart: always
     build: 
       context: ./backend
       dockerfile: Dockerfile
