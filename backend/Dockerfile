@@ -9,6 +9,7 @@ COPY requirements.txt /app/backend/
 
 RUN pip install -r requirements.txt
 
+
 RUN apk add --no-cache mariadb-connector-c-dev ;\
     apk add --no-cache --virtual .build-deps \
         build-base \
