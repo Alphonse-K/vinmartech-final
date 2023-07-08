@@ -5,7 +5,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 WORKDIR /app/backend
 
-COPY requirements.txt /app/backend/requirements.txt
+COPY requirements.txt /app/backend/
 
 RUN pip install -r requirements.txt
 
