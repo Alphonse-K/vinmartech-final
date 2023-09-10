@@ -15,6 +15,8 @@ from dotenv import load_dotenv
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv()
 
+print('KAMAN: ' + str(os.getenv('DB_HOST')), type(str(os.getenv('DB_HOST'))))
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,15 +85,15 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# https://docs.djangoproject.com/en/4.2/ref/settings/#databases  str(os.getenv('DB_ROOT_USER'))
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': str(os.getenv('DB_NAME')),
-        'USER': str(os.getenv('DB_ROOT_USER')),  
-        'PASSWORD': str(os.getenv('DB_PASSWORD')),  
-        'HOST': str(os.getenv('DB_HOST')),  
+        'NAME': 'vinmartech',
+        'USER': 'root',  
+        'PASSWORD': 'K56a33--m1',  
+        'HOST': 'host.docker.internal',  
         'PORT': 3306,  
         'OPTIONS': {  
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" 
