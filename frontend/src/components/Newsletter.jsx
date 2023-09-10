@@ -18,11 +18,12 @@ export default function Newsletter() {
         setEmail(e.target.value);
     }
 
-    const onSubmit = async (event) => {
-      event.preventDefault();
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log('Hey django got you!!!!!!!!!!')
       const result = {"email": email, "consent": consent}
       try {
-        await axios.post("http://localhost:8000/letter/", result)
+        axios.post("http://localhost:8000/letter/", result)
         .then(res => console.log(res.data) )
         .catch((e) => console.log(e));
       reset();
@@ -42,7 +43,7 @@ export default function Newsletter() {
             <h1><b>Vinmartech</b>,</h1>
             <h1>Préparez vous à réussir votre aventure digital! </h1>
             <h6>Recevez votre newsletter directement dans votre boîte mail</h6>
-            <form onSubmit={onSubmit} action='/endpoint' method='post'>
+            <form onSubmit={handleSubmit} action='/endpoint' method='post'>
               <label htmlFor="news" className='d-inline-block'>votre adresse email:</label>             
               <div className='d-flex'>
                 <input 
@@ -54,7 +55,7 @@ export default function Newsletter() {
                   placeholder='Votre adresse email' 
                   onChange={handleInput}
                 />
-                <button type='button'><FontAwesomeIcon icon={faPaperPlane} style={{color: "#ffff",}} /></button>
+                <button type='submit'><FontAwesomeIcon icon={faPaperPlane} style={{color: "#ffff",}} /></button>
               </div>
               <div className='checkbox d-flex' >
                   <input type="checkbox" name="cheese" id="check" checked={consent} onChange={checkHandler}></input>
