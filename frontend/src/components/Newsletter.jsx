@@ -18,7 +18,6 @@ export default function Newsletter() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log('Hey django got you!!!!!!!!!!')
       const result = {"email": email, "consent": consent}
       try {
         axios.post("http://localhost:8000/letter/", result)
